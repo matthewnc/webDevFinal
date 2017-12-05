@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+/* 4 columns */
+.column {
+    float: left;
+    width: 25%;
+    padding: 8px;
+}
+
+.column img {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 2 columns */
+@media (max-width: 1135px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* 1 vertical column */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+   }
+}
