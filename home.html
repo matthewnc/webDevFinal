@@ -5,9 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://use.typekit.net/jkv3azz.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-	<script src="scripts/main.js"></script>
+	<script type="text/javascript" src="scripts/newMain.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/navbar.css">
-	<link rel="stylesheet" type="text/css" href="css/random.css">
+	<link rel="stylesheet" type="text/css" href="css/randomPage.css">
 </head>
 <body>
 	<ul>
@@ -23,12 +23,24 @@
 	<div class="spacer">
     &nbsp;
 	</div>
-	
-	<div id="images">
-		<img src="usethese/random/1.jpg" id="randomImage1" width="400px">
-		<img src="usethese/random/1.jpg" id="randomImage2" width="400px">
-		<img src="usethese/random/1.jpg" id="randomImage3" width="400px">
-		<span class="stretch"></span>
+
+	<div class="row">
+		<div class="column">
+			<a href="#" onClick="showImage1();"><img src="usethese/random/1.jpg" id="randomImage1"></a>
+		</div>
+		<div class="column">
+			<a href="#" onClick="showImage2();"><img src="usethese/random/1.jpg" id="randomImage2"></a>
+		</div>
+		<div class="column">
+			<a href="#" onClick="showImage3();"><img src="usethese/random/1.jpg" id="randomImage3"></a>
+		</div>
 	</div>
+
+	<!-- Calling the randomizer function here instead of by window.onload gets rid of it showing the "default" image before showing the random result. Additionally, splitting it into 3 functions allows me to do the onClick above to individually reroll, as per your suggesstion. -->
+	<script type="text/javascript">
+		showImage1();
+		showImage2();
+		showImage3();
+	</script>
 </body>
 </html>

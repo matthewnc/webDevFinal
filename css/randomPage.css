@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+/* 3 columns */
+.column {
+    float: left;
+    width: 33%;
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.row {
+    width: 75%;
+    margin: auto;
+}
+
+@media (max-width: 1200px) {
+    .column {
+        padding: 5px;
+   }
+
+   .column img {
+    margin-top: 25px;
+    } 
+
+   .row {
+    width: 80%;
+   }
+}
+
+@media (max-width: 600px) {
+   .row {
+        width: 100%;
+   }
+}
